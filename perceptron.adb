@@ -3,12 +3,12 @@ package body Perceptron is
    function Create (Dimensions : Positive) return Perceptron_Model is
       Result : constant Perceptron_Model (Dimensions) :=
         (Dimensions         => Dimensions,
-         Weights            => (others => 0.0),
+         Weights            => [others => 0.0],
          Bias               => 0.0,
-         Pocket_Weights     => (others => 0.0),
+         Pocket_Weights     => [others => 0.0],
          Pocket_Bias        => 0.0,
          Best_Run           => 0,
-         Averaged_Weights   => (others => 0.0),
+         Averaged_Weights   => [others => 0.0],
          Averaged_Bias      => 0.0,
          Total_Samples_Seen => 0);
    begin
