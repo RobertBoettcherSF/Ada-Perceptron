@@ -82,16 +82,16 @@ package Perceptron is
 private
    type Perceptron_Model (Dimensions : Positive) is record
       -- Core / Standard state
-      Weights : Vector (1 .. Dimensions) := (others => 0.0);
+      Weights : Vector (1 .. Dimensions) := [others => 0.0];
       Bias    : Real := 0.0;
 
       -- Pocket state (Best preserved weights)
-      Pocket_Weights : Vector (1 .. Dimensions) := (others => 0.0);
+      Pocket_Weights : Vector (1 .. Dimensions) := [others => 0.0];
       Pocket_Bias    : Real := 0.0;
       Best_Run       : Natural := 0;
 
       -- Averaged state
-      Averaged_Weights   : Vector (1 .. Dimensions) := (others => 0.0);
+      Averaged_Weights   : Vector (1 .. Dimensions) := [others => 0.0];
       Averaged_Bias      : Real := 0.0;
       Total_Samples_Seen : Natural := 0;
    end record;
